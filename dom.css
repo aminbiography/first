@@ -1,0 +1,191 @@
+<!-- Document Object Model (DOM) -->
+
+
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.
+
+For example, the DOM specifies that the querySelectorAll method in this code snippet must return a list of all the <p> elements in the document:
+
+const paragraphs = document.querySelectorAll("p");
+// paragraphs[0] is the first <p> element
+// paragraphs[1] is the second <p> element, etc.
+alert(paragraphs[0].nodeName);
+
+
+
+<!-- Application Programming Interface(API). -->
+
+API stands for Application Programming Interface. In the context of APIs, the word Application refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses.
+
+
+<!-- DOM and JavaScript -->
+
+The previous short example, like nearly all examples, is JavaScript. That is to say, it is written in JavaScript, but uses the DOM to access the document and its elements. The DOM is not a programming language, but without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents, SVG documents, and their component parts. The document as a whole, the head, tables within the document, table headers, text within the table cells, and all other elements in a document are parts of the document object model for that document. They can all be accessed and manipulated using the DOM and a scripting language like JavaScript.
+
+
+
+The DOM was designed to be independent of any particular programming language, making the structural representation of the document available from a single, consistent API. Even if most web developers will only use the DOM through JavaScript, implementations of the DOM can be built for any language, as this Python example demonstrates:
+
+
+
+
+<!-- The following is a brief list of common APIs in web page scripting using the DOM. -->
+
+document.querySelector(selector)
+document.querySelectorAll(name)
+document.createElement(name)
+parentNode.appendChild(node)
+element.innerHTML
+element.style.left
+element.setAttribute()
+element.getAttribute()
+element.addEventListener()
+window.content
+Window.onload
+window.scrollTo()
+
+
+<!-- Examples -->
+
+<!-- The following example changes the content (the innerHTML) of the <p> element with id="demo": -->
+
+  HTML: 
+
+  <html>
+  <body>
+  
+  <p id="demo"></p>
+  
+  <script>
+  document.getElementById("demo").innerHTML = "Hello World!";
+  </script>
+  
+  </body>
+  </html>
+  
+  Output
+  
+  Hello World!
+
+
+  <!-- In the example above, getElementById is a method, while innerHTML is a property.
+  
+  The getElementById Method
+  The most common way to access an HTML element is to use the id of the element.
+  
+  In the example above the getElementById method used id="demo" to find the element.
+  
+  The innerHTML Property
+  The easiest way to get the content of an element is by using the innerHTML property.
+  
+  The innerHTML property is useful for getting or replacing the content of HTML elements. -->
+
+
+  <!-- Examples -->
+
+
+<!-- This example uses a <div> element containing a <textarea> and two <button> elements. When the user clicks the first button we set some text in the <textarea>. When the user clicks the second button we clear the text. We use: Document.querySelector() to access the <textarea> and the button EventTarget.addEventListener() to listen for button clicks Node.textContent to set and clear the text. -->
+
+
+HTML
+
+<div class="container">
+  <textarea class="story"></textarea>
+  <button id="set-text" type="button">Set text content</button>
+  <button id="clear-text" type="button">Clear text content</button>
+</div>
+
+
+CSS
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 200px;
+}
+
+
+JavaScript
+const story = document.body.querySelector(".story");
+
+const setText = document.body.querySelector("#set-text");
+setText.addEventListener("click", () => {
+  story.textContent = "It was a dark and stormy night...";
+});
+
+const clearText = document.body.querySelector("#clear-text");
+clearText.addEventListener("click", () => {
+  story.textContent = "";
+});
+
+
+<!-- Examples -->
+
+<!-- Adding a child element -->
+
+<!-- This example uses a <div> element containing a <div> and two <button> elements. When the user clicks the first button we create a new element and add it as a child of the <div>. When the user clicks the second button we remove the child element. We use: Document.querySelector() to access the <div> and the buttons EventTarget addEventListener() to listen for button clicks Document.createElement to create the element Node.appendChild() to add the child Node.removeChild() to remove the child. -->
+
+HTML
+
+<div class="container">
+  <div class="parent">parent</div>
+  <button id="add-child" type="button">Add a child</button>
+  <button id="remove-child" type="button">Remove child</button>
+</div>
+
+
+CSS
+.container {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+button {
+  width: 100px;
+}
+
+div.parent {
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+div.child {
+  border: 1px solid red;
+  margin: 10px;
+  padding: 5px;
+  width: 80px;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+
+JavaScript
+
+const parent = document.body.querySelector(".parent");
+
+const addChild = document.body.querySelector("#add-child");
+addChild.addEventListener("click", () => {
+  // Only add a child if we don't already have one
+  // in addition to the text node "parent"
+  if (parent.childNodes.length > 1) {
+    return;
+  }
+  const child = document.createElement("div");
+  child.classList.add("child");
+  child.textContent = "child";
+  parent.appendChild(child);
+});
+
+const removeChild = document.body.querySelector("#remove-child");
+removeChild.addEventListener("click", () => {
+  const child = document.body.querySelector(".child");
+  parent.removeChild(child);
+});
+
