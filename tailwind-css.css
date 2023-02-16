@@ -1,0 +1,298 @@
+<!-- Tailwindcss, flex and grid fundamentals -->
+
+
+<!-- Tailwind-css -->
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+
+
+<!-- Flex Box  ------- -->
+
+
+
+<!-- Syntax --
+/* Keyword values */
+flex: auto;
+flex: initial;
+flex: none;
+/* One value, unitless number: flex-grow
+flex-basis is then equal to 0. */
+flex: 2;
+/* One value, width/height: flex-basis */
+flex: 10em;
+flex: 30%;
+flex: min-content;
+/* Two values: flex-grow | flex-basis */
+flex: 1 30px;
+/* Two values: flex-grow | flex-shrink */
+flex: 2 2;
+/* Three values: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+/* Global values */
+flex: inherit;
+flex: initial;
+flex: revert;
+flex: revert-layer;
+flex: unset; -->
+
+<!-- Flexbox---
+flex-direction and axis
+justify-content
+align-items
+gap
+flex-wrap -->
+
+
+
+<div class=”parent”>
+  <div class=”child”>1</div>
+  <div class=”child”>2</div>
+  <div class=”child”>3</div>
+  <div class=”child”>4</div>
+  <div class=”child”>5</div>
+  <div class=”child”>6</div>
+</div>
+
+
+<!-- Setting the parent's display to flex -->
+
+
+
+.parent {
+   display: flex;
+}
+
+
+<!-- This gives us Six child items positioned inline. -->
+
+
+
+
+
+<!-- The two axes of flexbox
+Main axis: The main axis is defined by flex-direction, which has four possible values:
+row
+row-reverse
+column
+column-reverse
+Cross axis: The cross axis runs perpendicular to the main axis, therefore if your flex-direction (main axis) is set to row or row-reverse the cross axis runs down the columns.
+By default, the flex-direction is set torow , showing all the child items in a row, starting from the left. If the flex-direction is row-reverse if the direction of the child items will be starting from the right and ending to left. -->
+
+
+
+
+.parent {
+  display: flex;
+  flex-direction:row-reverse;
+}
+
+We can swap the two axes by adding flex-direction: column And flex-direction: column-reverse will revert the column.
+
+.parent {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+<!-- 2. Justify content and Align items
+We can make this list horizontal again, by switching the flex-direction from column to row, as this flips the flex layout’s axes back again.
+The reason the axes are important to understanding is that the attributes justify-content and align-items control how the items are positioned along the main axis and cross axis respectively.
+Let’s center all the items along the main axis by using justify-content: -->
+
+
+
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+And let’s adjust them along the cross axis, using align-items.
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+<!-- These are the other values of justify-content and align-items The names are self-explanatory, you need to play around those for better understanding by using any of these at a time. -->
+
+
+
+justify-content:
+flex-start (default)
+flex-end
+center
+space-between
+space-around
+.parent { 
+   justify-content: flex-start | flex-end | center | space-between |    space-around | space-evenly; 
+}
+align-items:
+flex-start
+flex-end
+center
+baseline
+stretch (default)
+.parent { 
+     align-items: flex-start | flex-end | center |baseline|stretch; 
+ }
+
+
+<!-- Properties for the Children
+By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. -->
+
+
+
+
+.child {
+  order: <number>; /* default is 0 */
+}
+
+
+<!-- “align-self” allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. -->
+
+
+
+<!-- It has the same values of align-items. -->
+
+
+.child { 
+   align-self: auto|flex-start|flex-end|center|baseline|stretch; 
+}
+
+
+<!-- Point to be noted that float, clear and vertical-align have no effect on a flex item. -->
+
+
+
+
+
+
+<!-- Grid layout -->
+
+<!-- grid
+grid-template-columns
+grid-template-rows
+Grid lines
+Repeat
+Minmax
+Auto Fit
+Auto Fill -->
+
+
+<!-- Consider a markup of Six items under a parent element. -->
+
+<div class="parent">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child">6</div>
+  </div>
+  
+  <!-- To make a grid layout, we need to give the parent div a display of grid. As simple as that. -->
+  
+  .parent {
+      display: grid;
+  }
+  
+  
+  <!-- We just dived in the grid layout. Though it does not do anything currently, but deep inside it’s assigned with superpowers. (I added a bit CSS styling, ie: padding, background-color etc.) -->
+  
+  
+  <!-- As I said Grid was designed for two-dimensional layout rows, and columns at the same time. Let’s create two columns and three rows. We’ll use the grid-template-row and grid-template-column properties. -->
+  
+  .parent {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+    text-align:center;
+  }
+  
+  
+  <!-- From the code and the picture, I think you understand how dead simple the concept is. grid-template-row property has three values and grid-template-column property has two values. So, the number of values of the properties defines the number of columns or rows respectively. So, you can start playing with Grid just by changing the number of values of grid-template-row and grid-template-column . -->
+  
+  
+  
+  <!-- Let’s dive into another example: -->
+  
+  
+  
+  .parent {
+    display: grid;
+    grid-template-columns: 100px 320px;
+    grid-template-rows: 80px 50px 120px;
+  }
+  
+  
+  
+  <!-- Let me break the code, grid-template-columns: 100px 320px; -->
+  
+  <!-- The width of the Items of the First Column is 100px width and for the Second Column, it is 320px; -->
+  
+  <!-- And for this, grid-template-rows: 80px 50px 120px; -->
+  
+  <!-- The height of the Items of the First Row, Second Row and Third Row is 80px, 50px and 120px respectively. -->
+  
+  <!-- Grid Line -->
+  
+  <!-- To understand the positioning concept of Grid layout first, we need to understand Grid Line and how it’s counted. It was very tricky for me when I learnt CSS Grid. The grey lines are the grid lines. -->
+  
+  
+  <!-- To position and resize the items we’ll target them and use the grid-columnand grid-row properties: -->
+  
+  <!-- If we want the first child to be expanded from Grid line 1 to Grid line 4, we need to specify that to the child1 class. grid-column-start: 1 is the starting point for the 1st child and grid-column-end: 4 is the ending point of the first child. -->
+  
+  
+  
+  .parent {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+  }
+  .child1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  
+  
+  
+  <!-- At this point in your learning, I’m 100% sure you’ll understand the code below. -->
+  
+  
+  
+  
+  .child1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .child3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .child4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
