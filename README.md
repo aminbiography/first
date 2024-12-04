@@ -1,39 +1,39 @@
 <h1>Bootstrap Overview</h1>
 
 ```
-<!-- 1. What is Bootstrap? -->
+<!-- 01. What is Bootstrap? -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">What is Bootstrap?</h2>
 <p class="text-gray-600">Bootstrap is an open-source front-end framework that provides pre-designed templates and components for building responsive, mobile-first websites and applications. It offers a set of CSS and JavaScript components like grids, buttons, forms, modals, navigation bars, and more, which makes it easier to design and develop modern web pages.</p>
 
-<!-- 2. Mobile-First Approach -->
+<!-- 02. Mobile-First Approach -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Mobile-First Approach</h2>
 <p class="text-gray-600">Bootstrap adopts a mobile-first design philosophy. This means that the framework is designed to create websites that look and work great on mobile devices, with responsive layouts that scale up to larger screen sizes, such as tablets and desktops. By default, it prioritizes smaller screens and adjusts for larger displays using responsive breakpoints.</p>
 
-<!-- 3. Grid System -->
+<!-- 03. Grid System -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Grid System</h2>
 <p class="text-gray-600">One of Bootstrap’s core features is its 12-column grid system. The grid allows developers to create flexible and responsive layouts by defining columns and rows in a container. The grid automatically adjusts to screen size, ensuring that your layout remains organized and responsive across different devices.</p>
 
-<!-- 4. Pre-built Components -->
+<!-- 04. Pre-built Components -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Pre-built Components</h2>
 <p class="text-gray-600">Bootstrap includes a wide variety of pre-built components such as buttons, navigation bars, forms, tables, alerts, cards, and much more. These components are ready to use and can be easily customized by applying different utility classes and modifying their styles, saving development time and effort.</p>
 
-<!-- 5. Customization -->
+<!-- 05. Customization -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Customization</h2>
 <p class="text-gray-600">While Bootstrap comes with default styles, it is highly customizable. You can easily override default theme settings using custom CSS, or you can use Bootstrap’s built-in Sass variables to adjust themes, colors, typography, and more. For advanced customization, Bootstrap provides a tool called Bootstrap Customize, allowing you to modify the framework according to your project’s needs.</p>
 
-<!-- 6. JavaScript Plugins -->
+<!-- 06. JavaScript Plugins -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">JavaScript Plugins</h2>
 <p class="text-gray-600">Bootstrap includes a variety of JavaScript plugins that enhance the functionality of the framework. These plugins provide features like modals, carousels, tooltips, popovers, accordions, and dropdowns. These are easy to implement by including Bootstrap’s JavaScript files and integrating them with your HTML components.</p>
 
-<!-- 7. Responsiveness -->
+<!-- 07. Responsiveness -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Responsiveness</h2>
 <p class="text-gray-600">Bootstrap's grid system and predefined media queries ensure that your website or application is responsive. It is designed to adapt to different screen sizes automatically, whether the user is viewing on a smartphone, tablet, or desktop. You can easily manage responsiveness by adding classes like <code>col-xs-12</code>, <code>col-md-6</code>, or <code>col-lg-4</code> to control the layout for various screen widths.</p>
 
-<!-- 8. Easy to Use -->
+<!-- 08. Easy to Use -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Easy to Use</h2>
 <p class="text-gray-600">Bootstrap is known for its ease of use, especially for beginners. With a well-organized and documented structure, it allows developers to quickly build responsive websites without writing complex CSS. Simply adding Bootstrap’s CSS and JavaScript files to your project gives you access to all its components and utilities.</p>
 
-<!-- 9. Consistent Design -->
+<!-- 09. Consistent Design -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Consistent Design</h2>
 <p class="text-gray-600">Bootstrap provides a consistent and polished design across your entire website. The framework’s predefined styles and components follow best practices for web design and development, ensuring that all elements look cohesive and professional, even if you don’t have a design team behind your project.</p>
 
@@ -154,42 +154,43 @@
 
 
 ====================================================================================================================================================================================================================
+
 <h1>Tailwind CSS Overview</h1>
 
 ```
-<!-- 1. What is Tailwind CSS -->
+<!-- 01. What is Tailwind CSS -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">What is Tailwind CSS?</h2>
 <p class="text-gray-600">Tailwind CSS is a utility-first CSS framework designed to help developers build custom designs directly in the HTML by applying utility classes. Instead of writing custom CSS or using pre-designed components, Tailwind allows you to compose styles with a collection of predefined classes, making the process of styling faster and more flexible.</p>
 
-<!-- 2. Utility-First CSS Framework -->
+<!-- 02. Utility-First CSS Framework -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Utility-First CSS Framework</h2>
 <p class="text-gray-600">Tailwind is a utility-first framework, meaning it provides low-level utility classes that allow you to style elements directly in your markup. You can combine multiple utilities to design complex layouts and responsive designs without writing custom CSS. For example, classes like <code>p-4</code> for padding or <code>text-center</code> for centering text are used to apply specific styles to elements.</p>
 
-<!-- 3. Responsive Design -->
+<!-- 03. Responsive Design -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Responsive Design</h2>
 <p class="text-gray-600">Tailwind makes it simple to create responsive web designs. By using <code>responsive modifiers</code>, you can apply different styles based on the screen size. Tailwind comes with built-in breakpoints like <code>sm:</code>, <code>md:</code>, <code>lg:</code>, and <code>xl:</code>, which allow you to design layouts that adjust for mobile, tablet, and desktop views.</p>
 
-<!-- 4. Customization -->
+<!-- 04. Customization -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Customization</h2>
 <p class="text-gray-600">Tailwind CSS is highly customizable. You can configure your project by editing the <code>tailwind.config.js</code> file, where you can define custom colors, breakpoints, spacing, and other design-related settings to match your brand or design system.</p>
 
-<!-- 5. Pre-built Components -->
+<!-- 05. Pre-built Components -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Pre-built Components</h2>
 <p class="text-gray-600">While Tailwind is focused on utility classes, it also provides a set of pre-built components through libraries like Tailwind UI. This allows you to quickly integrate UI elements like buttons, forms, and modals without the need to build them from scratch.</p>
 
-<!-- 6. Easy to Use -->
+<!-- 06. Easy to Use -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Easy to Use</h2>
 <p class="text-gray-600">Tailwind's utility-first approach simplifies the process of styling by reducing the need for custom CSS. Once you are familiar with the utility classes, you can quickly and efficiently apply styles to your HTML elements directly in the markup.</p>
 
-<!-- 7. Performance -->
+<!-- 07. Performance -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Performance</h2>
 <p class="text-gray-600">Tailwind CSS helps improve performance by enabling you to purge unused CSS in production. With tools like <code>purgecss</code>, unused styles are removed, ensuring that only the necessary styles are included in your final CSS file, resulting in smaller file sizes.</p>
 
-<!-- 8. Ecosystem -->
+<!-- 08. Ecosystem -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Ecosystem</h2>
 <p class="text-gray-600">Tailwind has a rich ecosystem with plugins, tools, and community-driven resources. You can find additional features, integrations, and examples, which allow for a faster and more efficient development process.</p>
 
-<!-- 9. Flexibility and Extensibility -->
+<!-- 09. Flexibility and Extensibility -->
 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Flexibility and Extensibility</h2>
 <p class="text-gray-600">One of the key benefits of Tailwind CSS is its flexibility. It allows you to build highly customized designs without constraints. Tailwind provides an extensible system where you can add custom utilities, components, and even new variants based on your project’s specific needs. This makes it highly adaptable for projects of all sizes and complexity levels.</p>
 
